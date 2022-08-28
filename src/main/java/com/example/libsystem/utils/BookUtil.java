@@ -18,7 +18,9 @@ public class BookUtil {
         bookDTO.setName(book.getName());
         bookDTO.setIsbn(book.getIsbn());
         bookDTO.setId(book.getId());
+        if (book.getAuthor()!=null)
         bookDTO.setAuthorDTO(AuthorUtil.toDto(book.getAuthor()));
+        if (book.getCustomer()!=null)
         bookDTO.setCustomerDTO(CustomerUtil.toDto(book.getCustomer()));
         return bookDTO;
     }

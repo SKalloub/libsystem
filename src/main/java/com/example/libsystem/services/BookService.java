@@ -18,8 +18,8 @@ public class BookService {
         return bookRepository.findAll();
     }
     public Optional<Book> getBookById(int id) {
-        System.err.println(id);
-        return bookRepository.findById(id);
+        Optional<Book> book =  bookRepository.findById(id);
+        return book;
     }
     public void AddBook(Book book) {
         bookRepository.save(book);
